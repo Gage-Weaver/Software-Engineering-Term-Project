@@ -1,12 +1,43 @@
 #include <iostream>
 #include <cmath>
+#include <vector>
 using namespace std;
  
 
 
- class Calculator{
+ class Operator{
     public:
-        char history[10][10] = {}; 
+        char history[10][10];
+    
+    char operation(float a,float b, char op){
+        switch (op) {
+        //  Addition
+        case '+':
+            cout << a << " + " << b << " = " << Caculator.addition(a, b) << endl;
+            break;
+        //   Subtraction
+        case '-':
+            cout << a << " - " << b << " = " << Caculator.subtraction(a, b) << endl;
+            break;
+        //    Multiplication
+        case '*':
+            cout << a << " * " << b << " = " << Caculator.multiplcation(a, b) << endl;
+            break;
+        //     Division
+        case '/':
+            cout << a << " / " << b << " = " << Caculator.division(a, b) << endl;
+            break;
+        //       Power
+        case '**':
+            cout << a << " ^ " << b << " = " << Caculator.power_raise(a, b) << endl;
+            break;
+        //       Invalid input handling 
+        default:
+            cout << "Invalid choice" << endl;
+            cout << " TRY AGAIN"  << endl;
+            break;
+        }
+    }
  
     float addition(float a, float b) {
         return a + b;
@@ -31,56 +62,27 @@ using namespace std;
     double power_raise(float a, float b) {
         return pow(a,b);
     }
- }
+};
 
-void operation(){
-    
+
+
+
+int main() {
     float num_1;
     float num_2;
     char choice;
-    Calculator operater; 
+    Operator Caculator; 
     while (true){
-    cout << "Enter a number: ";
-    cin >> num_1;
-    cout << endl;
-    cout << "Enter another number: ";
-    cin >> num_2;
-    cout << endl;
-    cout << "Enter operation to be performed (+, -, *, /, ^): ";
-    cin >> choice; // Read the choice from the user
-    
-        switch (choice) {
-            //  Addition
-            case '+':
-                cout << num_1 << " + " << num_2 << " = " << operater.addition(num_1,num_2) << endl;
-                break;
-            //   Subtraction
-            case '-':
-                cout << num_1 << " - " << num_2 << " = " << operater.subtraction(num_1, num_2) << endl;
-                break;
-            //    Multiplication
-            case '*':
-                cout << num_1 << " * " << num_2 << " = " << operater.multiplcation(num_1, num_2) << endl;
-                break;
-            //     Division
-            case '/':
-                cout << num_1 << " / " << num_2 << " = " << operater.division(num_1, num_2) << endl;
-                break;
-            //       Power
-            case '^':
-                cout << num_1 << " ^ " << num_2 << " = " << operater.power_raise(num_1, num_2) << endl;
-                break;
-            //       Invalid input handling 
-            default:
-                cout << "Invalid choice" << endl;
-                cout << " TRY AGAIN"  << endl;
-                break;
-        }
+        cout << "Enter a number: ";
+        cin >> num_1;
+        cout << endl;
+        cout << "Enter operation to be performed (+, -, *, /, **): ";
+        cin >> choice; // Read the choice from the user
+        cout << endl;
+        cout << "Enter another number: ";
+        cin >> num_2;
+        cout << endl;
+        Caculator.operation(num_1, num_2, choice);
     }
-    return 0;
-}
-
-int main() {
-    operation();
     return 0 ; 
 }
