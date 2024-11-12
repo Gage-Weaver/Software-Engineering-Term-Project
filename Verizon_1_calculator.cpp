@@ -1,3 +1,18 @@
+/**
+Operator Class contains the following methods:
+    ● Addition(float a, float b): Adds two numbers.⁤ (a+b) and returns the answer
+    ● Subtraction(float a, float b): Subtracts the second number from the first. (a-b) and returns the
+        answer
+    ● Multiplication(float a, float b): Multiplies two numbers.⁤ (a*b) and returns the answer
+    ● Modulus(float a, float b): Returns the remainder of dividing the first number by the second number
+        and returns the answer
+    ● Divide(float a, float b): Returns the result of division, first number divided by second (a/b) and
+        returns the answer with safeguards for division by 0
+    ● Power(float a, float b): Computes the first integer to the power of the second and returns the
+        answer
+ */
+
+
 #include <iostream>
 #include <cmath>
 #include <vector>
