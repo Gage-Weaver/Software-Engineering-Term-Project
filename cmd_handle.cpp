@@ -4,13 +4,13 @@
 
 using namespace std;
 
-class cmd_handle
+class cmd_handle //Initialize cmd_handle class
 {
-    public:
-        void exit_program(){
-            exit(0);
+    public: //Set the functions to public functions
+        void exit_program(){ //Initialize the exit program function
+            exit(0); //Use C++ built in function "exit" to exit the whole program.
         }
-        void help(){
-            cout<< "Sample User Help Text" <<endl;
+        void help(){ //Initialize the help function
+            cout<< "Sample User Help Text" <<endl; //Output sample text, will be edited later to produce a more in depth manual for the user.
         }
 };
