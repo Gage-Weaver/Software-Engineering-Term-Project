@@ -4,7 +4,7 @@
 using namespace std;
 
 //takes the input from UIinteraction and calls 
-//the assosiated call from CommandHandling 
+//the assosiated fucntion from CommandHandling 
 
 int main(){
     //cout <<"in main"<< endl; //debug
