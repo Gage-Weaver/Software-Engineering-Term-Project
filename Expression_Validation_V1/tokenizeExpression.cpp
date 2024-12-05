@@ -24,11 +24,21 @@ int tokenizeExpression(string expression, vector<string> &tokens)
         {
             continue;
         }
-        else if (isdigit(expression[i]))
+        else if (isdigit(expression[i]) || expression[i] == '.')
         {
             string number = "";
-            while (i < expression.length() && isdigit(expression[i]))
+            bool hasDecimal = false;
+
+            while (i < expression.length() && (isdigit(expression[i]) || expression[i] == '.'))
             {
+                if (expression[i] == '.')
+                {
+                    if (hasDecimal)
+                    {
+                        break; // If there is more than one decimal, break the loop
+                    }
+                    hasDecimal = true;
+                }
                 number += expression[i];
                 i++;
             }
