@@ -1,4 +1,5 @@
-#include fullbackend.h
+#include "fullbackend.h"
+#include "tokenizeExpression.cpp"
 using namespace std;
 
 class backend //Create all encompassing backend class.
@@ -11,3 +12,9 @@ class backend //Create all encompassing backend class.
             return 0;
         }
 };
+int main(){
+    backend Backtest;
+    vector<string> tokens;
+    Backtest.backendEvaluate("3+4", tokens);
+    return 0;
+}
