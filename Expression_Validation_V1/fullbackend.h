@@ -1,5 +1,6 @@
-#ifndef allIncludes_H
-#define allIncludes_H
+#ifndef fullbackend
+#define fullbackend
+#include allincludes.h
 #include <stdexcept>
 #include <iostream>
 #include <vector>
@@ -7,4 +8,5 @@
 #include <iostream>
 #include <vector>
 #include <cctype> //For isdigit
+#endif
 using namespace std;
