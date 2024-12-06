@@ -8,7 +8,7 @@
 
 class Backend {
 public:
-    int backendEvaluate(const std::string &input, std::vector<std::string> &output);
+    double backendEvaluate(const std::string &input, std::vector<std::string> &output);
 };
 
 #endif
