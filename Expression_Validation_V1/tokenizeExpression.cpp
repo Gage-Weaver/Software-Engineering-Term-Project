@@ -1,9 +1,3 @@
-/*
-This file will be used to accept calculator input, tokenize it, then pass to the parser.
-It will also ensure that adjacent values or expressions such as "55" or "**" will be properly interpreted
-as "55" and the exponent operator, rather than "5", "5" and two multiplication operator.
-Spaced and non-spaced expressions function as intended
-*/
 
 #include <iostream>
 #include <vector>
