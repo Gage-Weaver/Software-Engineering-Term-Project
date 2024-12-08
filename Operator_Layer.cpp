@@ -22,29 +22,28 @@ using namespace std;
 
  class Operator{
     public:
-        char history[10][10];
     
     char operation(float a,float b, char op){
         switch (op) {
         //  Addition
         case '+':
-            cout << a << " + " << b << " = " << Caculator.addition(a, b) << endl;
+            cout << a << " + " << b << " = " << addition(a, b) << endl;
             break;
         //   Subtraction
         case '-':
-            cout << a << " - " << b << " = " << Caculator.subtraction(a, b) << endl;
+            cout << a << " - " << b << " = " << subtraction(a, b) << endl;
             break;
         //    Multiplication
         case '*':
-            cout << a << " * " << b << " = " << Caculator.multiplcation(a, b) << endl;
+            cout << a << " * " << b << " = " << multiplcation(a, b) << endl;
             break;
         //     Division
         case '/':
-            cout << a << " / " << b << " = " << Caculator.division(a, b) << endl;
+            cout << a << " / " << b << " = " << division(a, b) << endl;
             break;
         //       Power
-        case '**':
-            cout << a << " ^ " << b << " = " << Caculator.power_raise(a, b) << endl;
+        case '^':
+            cout << a << " ^ " << b << " = " << power_raise(a, b) << endl;
             break;
         //       Invalid input handling 
         default:
@@ -91,7 +90,7 @@ int main() {
         cout << "Enter a number: ";
         cin >> num_1;
         cout << endl;
-        cout << "Enter operation to be performed (+, -, *, /, **): ";
+        cout << "Enter operation to be performed (+, -, *, /, ^): ";
         cin >> choice; // Read the choice from the user
         cout << endl;
         cout << "Enter another number: ";
