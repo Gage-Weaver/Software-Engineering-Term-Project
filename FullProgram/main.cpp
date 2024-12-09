@@ -1,5 +1,5 @@
 #include "UIInteraction.h"
-#include "CommandHandling.h"
+#include "commandhandling.h"
 #include <iostream>
 #include "fullbackend.h"
 using namespace std;
