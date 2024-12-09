@@ -1,5 +1,6 @@
 #include "allIncludes.h"
 #include "operator_layer.h"
+using namespace std;
 /*
 This file is responsible for evaluating expressions passed to it
 it will take the tokenized expression and utilize the shunting yard algorithm
@@ -52,7 +53,6 @@ double evaluatePostfix(const std::vector<std::string>& postfix) {
 			numbers.pop(); //pop from the stack
             
 			double result; //declare a double to hold the result
-			//once interconnected with other programs need to properly call the operator functions defined in the other functions, these here for testing
 			Operator op;
 			if (token == "+") {
 				result = op.addition(a,b);
@@ -61,18 +61,24 @@ double evaluatePostfix(const std::vector<std::string>& postfix) {
 			} else if (token == "*") {
 				result = op.multiplication(a,b);
 			} else if (token == "/") {
+				if (b == 0) {  // Check for division by zero
+                    throw runtime_error("Error: Division by zero.");
+                }
 				result = op.division(a,b);
 			} else if (token == "%") {
+				if (b == 0) {  // Check for modulus by zero
+                    throw runtime_error("Error: Modulus by zero.");
+                }
 				result = op.modulus_operator(a,b);  
 			} else if (token == "**") {
 				result = op.power_raise(a,b);  
 			}
 
-			numbers.push(std::to_string(result));  // Push the result back to the stack
+			numbers.push(to_string(result));  // Push the result back to the stack
 		}
 	}
 
-	return std::stod(numbers.top());  // The result will be the only element in the stack
+	return stod(numbers.top());  // The result will be the only element in the stack
 }
 
 /*
