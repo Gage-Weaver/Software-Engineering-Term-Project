@@ -1,5 +1,5 @@
 #include "allIncludes.h"
-#include <cmath> //remove after testing
+#include "operator_layer.h"
 /*
 This file is responsible for evaluating expressions passed to it
 it will take the tokenized expression and utilize the shunting yard algorithm
@@ -53,18 +53,19 @@ double evaluatePostfix(const std::vector<std::string>& postfix) {
             
 			double result; //declare a double to hold the result
 			//once interconnected with other programs need to properly call the operator functions defined in the other functions, these here for testing
+			Operator op;
 			if (token == "+") {
-				result = a + b;
+				result = op.addition(a,b);
 			} else if (token == "-") {
-				result = a - b;
+				result = op.subtraction(a,b);
 			} else if (token == "*") {
-				result = a * b;
+				result = op.multiplication(a,b);
 			} else if (token == "/") {
-				result = a / b;
+				result = op.division(a,b);
 			} else if (token == "%") {
-				result = fmod(a, b);  
+				result = op.modulus_operator(a,b);  
 			} else if (token == "**") {
-				result = pow(a, b);  
+				result = op.power_raise(a,b);  
 			}
 
 			numbers.push(std::to_string(result));  // Push the result back to the stack
@@ -152,7 +153,6 @@ double ExpressionEvaluator::evaluateExpression(const std::vector<std::string>& t
 
 	return evaluatePostfix(postfix);  // Evaluate the postfix expression using a function like evaluatePostfix
 }
-
 
 
 
