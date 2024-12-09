@@ -31,8 +31,13 @@ int main(){
         }
         else{
             vector<string> output;
-            double result = backend.backendEvaluate(input, output);
-            cout<<"Answer="<< result << endl; //debug
-        }
+            try {
+                double result = backend.backendEvaluate(input, output);
+                cout << "Result: " << result << endl;
+            } 
+            catch (const std::runtime_error& e) {
+                cerr << e.what() << endl;
+                continue;  
+            }
     }
 }
