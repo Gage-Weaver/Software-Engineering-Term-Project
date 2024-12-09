@@ -53,16 +53,17 @@ double evaluatePostfix(const std::vector<std::string>& postfix) {
             
 			double result; //declare a double to hold the result
 			//once interconnected with other programs need to properly call the operator functions defined in the other functions, these here for testing
+			Operator op;
 			if (token == "+") {
 				result = op.addition(a,b);
 			} else if (token == "-") {
-				result = op.subtract(a,b);
+				result = op.subtraction(a,b);
 			} else if (token == "*") {
 				result = op.multiplication(a,b);
 			} else if (token == "/") {
 				result = op.division(a,b);
 			} else if (token == "%") {
-				result = op.modulus(a,b);  
+				result = op.modulus_operator(a,b);  
 			} else if (token == "**") {
 				result = op.power_raise(a,b);  
 			}
@@ -152,7 +153,6 @@ double ExpressionEvaluator::evaluateExpression(const std::vector<std::string>& t
 
 	return evaluatePostfix(postfix);  // Evaluate the postfix expression using a function like evaluatePostfix
 }
-
 
 
 
