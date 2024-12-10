@@ -6,7 +6,7 @@ using namespace std;
 void UIInteraction::startupMessage(){
 
     cout <<"=========================================================================================="<<std::endl;
-    cout <<"Welcome to the arithmetic expression parser"<<std::endl;
+    cout <<"Welcome to Tech Calculator"<<std::endl;
     cout <<"To start, enter an expression, or type 'help' for a full list of instructions and tips." <<std::endl;
     cout <<"Type 'exit' when you're done." << std::endl; 
     cout <<"=========================================================================================="<<std::endl;
@@ -17,7 +17,7 @@ void UIInteraction::startupMessage(){
 string UIInteraction::inputPrompt(){
 
     cout <<"=========================================================================================="<<std::endl;
-    cout <<"Type an expression to be parsed."<< std::endl;
+    cout <<"Type an expression to be evaluated"<< std::endl;
     cout << std::endl;
     //cout <<"Type 'help' for more information"<< std::endl;
     //cout << std::endl;                                         //**Should we include help and exit in prompt?
