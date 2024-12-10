@@ -1,5 +1,5 @@
 
-#include "CommandHandling.h"
+#include "commandhandling.h"
 #include <iostream>
 using namespace std;
 
