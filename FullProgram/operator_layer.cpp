@@ -11,7 +11,7 @@ double Operator::subtraction(double a, double b) {
 
 double Operator::division(double a, double b) {
     if (b == 0) {
-        throw invalid_argument("Division by zero not allowed");
+        throw invalid_argument("Error: Division by zero not allowed");
     }
     return a / b;
 }
@@ -26,7 +26,7 @@ double Operator::power_raise(double a, double b) {
 
 double Operator::modulus_operator(double a, double b){
     if (b == 0) {
-        throw invalid_argument("Modulus by zero not allowed");
+        throw invalid_argument("Error: Modulus by zero not allowed");
     }
     return fmod(a, b);
 }

@@ -27,7 +27,6 @@ string UIInteraction::inputPrompt(){
     //take input and return it to main
     string input;
     getline(cin, input);
-    cout << "User entered: " << input << endl; //test input, delete later
     return input;
 }
 
